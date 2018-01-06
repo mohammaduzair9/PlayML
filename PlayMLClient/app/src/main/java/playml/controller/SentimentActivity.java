@@ -17,6 +17,7 @@ import android.content.res.AssetManager;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import playml.R;
@@ -40,9 +41,9 @@ public class SentimentActivity extends AppCompatActivity {
     private TextView tvSentiment;
     private ImageView ivShow;
     private Bitmap[] bmps;
-    private List<String> statements;
-    private List<Integer> sentiments;
-    private Sentiments sen;
+    private List<String> statements = new ArrayList<>();
+    private List<Integer> sentiments = new ArrayList<>();
+    private Sentiments sen = new Sentiments();
     int num=0;
 
     @Override
@@ -56,12 +57,12 @@ public class SentimentActivity extends AppCompatActivity {
         tvSentiment = (TextView) findViewById(R.id.tvSentiment);
         ivShow = (ImageView) findViewById(R.id.ivShow);
 
-        statements.add("You are a lovely person");
-        statements.add("You are dumb");
-        statements.add("I lost the match");
-        statements.add("Lets to to party");
-        statements.add("I will slap you hard");
-        statements.add("I think you should get lost");
+        statements.add(0,"You are a lovely person");
+        statements.add(1, "You are dumb");
+        statements.add(2, "I lost the match");
+        statements.add(3, "Lets to to party");
+        statements.add(4, "I will slap you hard");
+        statements.add(5,"I think you should get lost");
 
         sen.setStatements(statements);
 
@@ -148,9 +149,9 @@ public class SentimentActivity extends AppCompatActivity {
 
         if(num == statements.size()){
 
-            SentimentBo sentbo = new SentimentBo();
-            sen.setSentiments(sentiments);
-            sentbo.postSentiment(sen);
+//            SentimentBo sentbo = new SentimentBo();
+//            sen.setSentiments(sentiments);
+//            sentbo.postSentiment(sen);
 
             Intent intent = new Intent(SentimentActivity.this, PredictionActivity.class);
             startActivity(intent);
@@ -170,9 +171,9 @@ public class SentimentActivity extends AppCompatActivity {
 
         if(num == statements.size()){
 
-            SentimentBo sentbo = new SentimentBo();
-            sen.setSentiments(sentiments);
-            sentbo.postSentiment(sen);
+//            SentimentBo sentbo = new SentimentBo();
+//            sen.setSentiments(sentiments);
+//            sentbo.postSentiment(sen);
 
             Intent intent = new Intent(SentimentActivity.this, PredictionActivity.class);
             startActivity(intent);
@@ -192,9 +193,9 @@ public class SentimentActivity extends AppCompatActivity {
 
         if(num == statements.size()){
 
-            SentimentBo sentbo = new SentimentBo();
-            sen.setSentiments(sentiments);
-            sentbo.postSentiment(sen);
+//            SentimentBo sentbo = new SentimentBo();
+//            sen.setSentiments(sentiments);
+//            sentbo.postSentiment(sen);
 
             Intent intent = new Intent(SentimentActivity.this, PredictionActivity.class);
             startActivity(intent);
