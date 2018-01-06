@@ -11,8 +11,6 @@ import playml.model.User;
  */
 public class UserBo {
 
-
-
     public static final String REST_SERVICE_URI = "http://10.0.2.2:8080/playml";
     RestTemplate restTemplate = new RestTemplate();
 

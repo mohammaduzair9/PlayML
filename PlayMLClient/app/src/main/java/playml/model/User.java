@@ -6,17 +6,8 @@ package playml.model;
  */
 public class User {
 
-    private int id;
     private String username;
     private String password;
-
-    public void setId(int id){
-        this.id = id;
-    }
-
-    public int getId(){
-        return id;
-    }
 
     public void setUserName(String username){
         this.username = username;

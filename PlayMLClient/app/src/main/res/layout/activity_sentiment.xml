@@ -6,4 +6,81 @@
     android:layout_height="match_parent"
     tools:context="playml.controller.SentimentActivity">
 
+    <ImageButton
+        android:id="@+id/btn_angry"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="236dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="btn_angry_click"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_happy"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSentiment"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/button_angry" />
+
+    <ImageButton
+        android:id="@+id/btn_happy"
+        android:layout_width="120dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="btn_happy_click"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.933"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSentiment"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/button_happy" />
+
+    <ImageButton
+        android:id="@+id/btnSad"
+        android:layout_width="113dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/transparent"
+        android:onClick="btn_sad_click"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSentiment"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/button_sad" />
+
+    <TextView
+        android:id="@+id/tvSentiment"
+        android:layout_width="332dp"
+        android:layout_height="135dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <ImageView
+        android:id="@+id/ivShow"
+        android:layout_width="331dp"
+        android:layout_height="329dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        android:padding="80dp"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSad" />
 </android.support.constraint.ConstraintLayout>
