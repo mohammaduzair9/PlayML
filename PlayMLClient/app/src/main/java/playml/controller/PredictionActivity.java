@@ -123,9 +123,8 @@ public class PredictionActivity extends AppCompatActivity {
 
     public void predict_result(View view){
 
-//        int r = sentbo.getPrediction(etStatement.getText().toString());
+        int r = sentbo.getPrediction(etStatement.getText().toString());
 
-        int r=1;
         if(r == 0){
             tvResult.setText("SAD");
             load_bitmaps("sad_sprite.png", NB_FRAMES_SAD);
