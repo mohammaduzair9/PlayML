@@ -149,15 +149,16 @@ public class SentimentActivity extends AppCompatActivity {
 
         if(num == statements.size()){
 
-//            SentimentBo sentbo = new SentimentBo();
-//            sen.setSentiments(sentiments);
-//            sentbo.postSentiment(sen);
+           SentimentBo sentbo = new SentimentBo();
+           sen.setSentiments(sentiments);
+           sentbo.postSentiment(sen);
 
             Intent intent = new Intent(SentimentActivity.this, PredictionActivity.class);
             startActivity(intent);
-        }
+        }else{
 
-        tvSentiment.setText(statements.get(num));
+            tvSentiment.setText(statements.get(num));
+        }
 
         load_bitmaps("sad_sprite.png", NB_FRAMES_SAD);
     }
@@ -171,16 +172,16 @@ public class SentimentActivity extends AppCompatActivity {
 
         if(num == statements.size()){
 
-//            SentimentBo sentbo = new SentimentBo();
-//            sen.setSentiments(sentiments);
-//            sentbo.postSentiment(sen);
+           SentimentBo sentbo = new SentimentBo();
+           sen.setSentiments(sentiments);
+           sentbo.postSentiment(sen);
 
             Intent intent = new Intent(SentimentActivity.this, PredictionActivity.class);
             startActivity(intent);
+        }else{
+
+            tvSentiment.setText(statements.get(num));
         }
-
-
-        tvSentiment.setText(statements.get(num));
 
         load_bitmaps("happy_sprite.png", NB_FRAMES_HAPPY);
     }
@@ -193,16 +194,16 @@ public class SentimentActivity extends AppCompatActivity {
 
         if(num == statements.size()){
 
-//            SentimentBo sentbo = new SentimentBo();
-//            sen.setSentiments(sentiments);
-//            sentbo.postSentiment(sen);
+           SentimentBo sentbo = new SentimentBo();
+           sen.setSentiments(sentiments);
+           sentbo.postSentiment(sen);
 
             Intent intent = new Intent(SentimentActivity.this, PredictionActivity.class);
             startActivity(intent);
+        } else{
+
+            tvSentiment.setText(statements.get(num));
         }
-
-        tvSentiment.setText(statements.get(num));
-
         load_bitmaps("angry_sprite.png", NB_FRAMES_ANGRY);
     }
 
